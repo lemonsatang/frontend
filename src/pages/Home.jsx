@@ -15,7 +15,7 @@ export default function Home() {
 
   return (
     <div className="container">
-      <table className="table table-hover border table-border shadow my-4">
+      <table className="table table-hover border table-border shadow my-4 text-center">
         <thead>
           <tr className="table-info">
             <th scope="col">#</th>

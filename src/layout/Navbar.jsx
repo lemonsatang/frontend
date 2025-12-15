@@ -1,12 +1,13 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <nav className="navbar navbar-expand-md bg-primary navbar-dark">
+    <nav className="navbar navbar-expand-md bg-info navbar-dark">
       <div className="container-fluid">
-        <Link className="navbar-brand text-warning" to="/">
+        <Link className="navbar-brand text-dark" to="/">
           리액트 & 스프링부트
         </Link>
         <button
