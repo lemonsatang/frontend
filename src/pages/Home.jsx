@@ -6,7 +6,7 @@ export default function Home() {
       <table className="table border shadow my-4">
         <table class="table">
           <thead>
-            <tr>
+            <tr class="table-info">
               <th scope="col">#</th>
               <th scope="col">First</th>
               <th scope="col">Last</th>
