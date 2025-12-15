@@ -41,7 +41,12 @@ export default function Home() {
               <td>{user.username}</td>
               <td>{user.email}</td>
               <td>
-                <button className="btn btn-outline-secondary mx-2">보기</button>
+                <Link
+                  className="btn btn-outline-secondary mx-2"
+                  to={`/viewuser/${user.id}`}
+                >
+                  보기
+                </Link>
                 <Link
                   className="btn btn-outline-warning mx-2"
                   to={`/edituser/${user.id}`}
