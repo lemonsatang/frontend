@@ -1,13 +1,14 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
     <nav className="navbar navbar-expand-md bg-primary navbar-dark">
       <div className="container-fluid">
-        <a className="navbar-brand text-warning" href="#">
+        <Link className="navbar-brand text-warning" to="/">
           리액트 & 스프링부트
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -22,7 +23,9 @@ function Navbar() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <button className="btn btn-outline-light">유저 추가</button>
+              <Link className="btn btn-outline-light" to="/adduser">
+                유저 추가
+              </Link>
             </li>
           </ul>
         </div>
