@@ -1,7 +1,9 @@
+import axios from "axios";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function AddUser() {
+  const navigate = useNavigate(); // 이동 객체
   const [user, setUser] = useState({
     name: "",
     username: "",
@@ -16,9 +18,11 @@ export default function AddUser() {
       [e.target.name]: e.target.value,
     });
   };
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
-    console.log("서브밋 이벤트 정지");
+    await axios.post("http://localhost:8080/users", user);
+    // 성공적으로 보낸 후 기본페이지로
+    navigate("/");
   };
   return (
     <div className="container">
@@ -31,6 +35,7 @@ export default function AddUser() {
                 이름
               </label>
               <input
+                required
                 type="text"
                 id="name"
                 value={name}
@@ -45,6 +50,7 @@ export default function AddUser() {
                 유저네임
               </label>
               <input
+                required
                 type="text"
                 id="username"
                 value={username}
@@ -59,6 +65,7 @@ export default function AddUser() {
                 이메일
               </label>
               <input
+                required
                 type="text"
                 id="email"
                 value={email}
