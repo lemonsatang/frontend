@@ -43,7 +43,7 @@ export default function ViewUser() {
             </div>
           </div>
           <Link className="btn btn-primary my-2" to={"/"}>
-            돌아기기
+            돌아가기
           </Link>
         </div>
       </div>
